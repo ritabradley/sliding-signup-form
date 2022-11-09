@@ -2,13 +2,99 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport"
-	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+	      name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
 	<title>Sliding Sign Up/ Sign In Form</title>
-	<link rel="stylesheet" href="style.css">
+	<link crossorigin="anonymous"
+	      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+	      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+	      referrerpolicy="no-referrer" rel="stylesheet"/>
+	<link href="style.css" rel="stylesheet">
 </head>
 <body>
-
+<div class="container" id="container">
+	<div class="form__container signup-form__container">
+		<form action="#" id="signup-form">
+			<h1 class="signup-form__title">Create An Account</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fa-brands fa-twitter"></i></a>
+				<a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+			</div>
+			<span class="signup-form__email-text">or use your email to
+				register</span>
+			<label aria-label="Input for full name" for="signup-form__name-input">
+				<input id="signup-form__name-input" name="name" type="text"
+				       placeholder="Full name"
+				       aria-placeholder="Enter your first and last name">
+			</label>
+			<label aria-label="Input for email address"
+			       for="signup-form__email-input">
+				<input id="signup-form__email-input"
+				type="email" placeholder="Enter an email address"
+				       aria-placeholder="Enter a valid email address">
+			</label>
+			<label aria-label="Input for creating password"
+			       for="signup-form__password-input">
+				<input id="signup-form__password-input" type="password"
+				       placeholder="Create a password"
+				       aria-placeholder="Create a password. Must be at least 8 characters long, and include at least 1 uppercase letter, 1 number, and 1 special character">
+			</label>
+			<label aria-label="Input for confirming password"
+			       for="signup-form__confirmation-input">
+				<input id="signup-form__confirmation-input" type="password"
+				       placeholder="Confirm password"
+				       aria-placeholder="Re-enter your password to confirm">
+			</label>
+			<button id="signup-form__submit-btn"
+			        class="signup-form__submit-btn">Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container signin-form__container">
+		<form action="#" id="signin__form">
+			<h1 class="signin-form__title">Sign In</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fa-brands fa-twitter"></i></a>
+				<a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+			</div>
+			<span class="signup-form__email-text">or use your email
+				account</span>
+			<label aria-label="Input for email address"
+			       for="signin-form__email-input">
+				<input id="signin-form__email-input"
+				       type="email" placeholder="Email address"
+				       aria-placeholder="Enter your account email address">
+			</label>
+			<label aria-label="Input for creating password"
+			       for="signin-form__password-input">
+				<input id="signin-form__password-input" type="password"
+				       placeholder="Password"
+				       aria-placeholder="Enter your account password">
+			</label>
+			<a href="#" class="forgot-password">Forgot your password?</a>
+			<button class="signin-form__submit-btn">Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h2 class="overlay-left__title">Welcome Back!</h2>
+				<p class="overlay-left__content">To get back to business, please
+					log in with your email address and password</p>
+				<button id="sign-in" class="btn-ghost">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-left">
+				<h2 class="overlay-left__title">Hey you!</h2>
+				<p class="overlay-left__content">Want to get your hands on
+					everything we have to offer? Enter your details now to
+					join us!</p>
+				<button id="signup" class="btn-ghost">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="app.js"></script>
 </body>
 </html>

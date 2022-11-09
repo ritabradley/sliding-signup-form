@@ -1,0 +1,31 @@
+@import url(https://fonts.bunny.net/css?family=jost:400,800);
+
+$white: #F9F5EE;
+$light-accent: #C0A1ED;
+$dark-accent: #5D58D0;
+$primary-color: #65B6DF;
+$secondary-color: #A5A4EB;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  align-items: center;
+  background-color: $white;
+  color: $dark-accent;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  justify-content: center;
+  margin: -2rem 0 5rem;
+  min-height: 100vh;
+}

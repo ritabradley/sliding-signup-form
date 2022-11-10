@@ -3,8 +3,7 @@
 $white: #fdfdfd;
 $overlay-color: #f9f5ee;
 $light-accent: #c0a1ed;
-$dark-accent: #5d58d0;
-$primary-color: #65b6df;
+$primary-color: #5d58d0;
 $secondary-color: #a5a4eb;
 $bold: 800;
 
@@ -21,7 +20,7 @@ html {
 body {
   align-items: center;
   background-color: $overlay-color;
-  color: $dark-accent;
+  color: $primary-color;
   display: flex;
   flex-direction: column;
   font-family: 'Jost', sans-serif;
@@ -161,4 +160,52 @@ button {
   opacity: 0;
   width: 50%;
   z-index: 1;
+}
+
+
+.overlay {
+  background: $primary-color;
+  background: linear-gradient(to right bottom, darken($secondary-color, 5%), $primary-color) no-repeat 0 0 / cover;
+  color: $white;
+  height: 100%;
+  left: -100%;
+  position: relative;
+  transform: translateX(0);
+  transition: transform .6s ease-in-out;
+  width: 200%;
+
+  &-container {
+    height: 100%;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transition: transform .6s ease-in-out;
+    width: 50%;
+    z-index: 100;
+  }
+
+  &-panel {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    transform: translateX(0);
+    transition: transform .6s ease-in-out;
+  }
+
+  &-right {
+    right: 0;
+    transform: translateX(0)
+  }
+
+  &-left {
+    transform: translateX(-20%);
+  }
 }

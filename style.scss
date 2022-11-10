@@ -1,10 +1,11 @@
-@import url(https://fonts.bunny.net/css?family=jost:400,800);
+@import url(https://fonts.bunny.net/css?family=jost:100,400,800);
 
 $white: #F9F5EE;
 $light-accent: #C0A1ED;
 $dark-accent: #5D58D0;
 $primary-color: #65B6DF;
 $secondary-color: #A5A4EB;
+$bold: 800;
 
 * {
   box-sizing: border-box;
@@ -28,4 +29,37 @@ body {
   justify-content: center;
   margin: -2rem 0 5rem;
   min-height: 100vh;
+}
+
+.signup-form, .signin-form {
+  &__title {
+    font-weight: $bold;
+    font-size: 3.2rem;
+  }
+
+  &__email-text {
+    font-size: 1.2rem;
+  }
+}
+
+.overlay-left, .overlay-right {
+  &__title {
+    font-weight: $bold;
+    font-size: 3.2rem;
+  }
+
+  &__content {
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 2rem;
+    letter-spacing: 0.5px;
+    margin: 2rem 0 3rem;
+  }
+}
+
+.social, .forgot-password {
+  color: $light-accent;
+  font-size: 1.4rem;
+  text-decoration: none;
+  margin: 1.5rem 0;
 }

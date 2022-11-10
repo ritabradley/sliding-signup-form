@@ -127,6 +127,44 @@ button {
   overflow: hidden;
   position: relative;
   width: 768px;
+
+  &.right-panel-active {
+    .signin-form__container {
+      transform: translateX(100%)
+    }
+
+    .signup-form__container {
+      opacity: 1;
+      transform: translateX(100%);
+      z-index: 5;
+    }
+
+    .overlay-container {
+      transform: translateX(-100%);
+    }
+
+    .overlay {
+      transform: translateX(50%);
+
+      &-left {
+        transform: translateX(0);
+      }
+
+      &-right {
+        transform: translateX(20%);
+      }
+    }
+  }
+
+  &.left-panel-active {
+    .signup-form__container {
+      transform: translateX(-100%)
+    }
+
+    .overlay-container {
+      transform: translateX(100%);
+    }
+  }
 }
 
 .form__container {
@@ -186,18 +224,18 @@ button {
   }
 
   &-panel {
-    position: absolute;
-    top: 0;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 4rem;
     height: 100%;
-    width: 50%;
+    justify-content: center;
+    padding: 0 4rem;
+    position: absolute;
     text-align: center;
+    top: 0;
     transform: translateX(0);
     transition: transform .6s ease-in-out;
+    width: 50%;
   }
 
   &-right {
